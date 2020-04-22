@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const authRoutes = require("./router/auth");
+const authRoutes = require("./routes/auth");
 const errorHandlers = require("./handlers/error");
 
 const PORT = 8081;
