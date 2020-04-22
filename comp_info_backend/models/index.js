@@ -10,6 +10,7 @@ mongoose.connect("mongodb://localhost/comp_info", {
 
 module.exports.User = require("./user");
 module.exports.Device = require("./device");
+module.exports.Device = require("./deviceUsage");
 module.exports.Organization = require("./organization");
 module.exports.Branch = require("./branch");
 
