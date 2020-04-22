@@ -24,5 +24,10 @@ exports.addDevice = async function (request, response, next) {
 };
 
 exports.getAllDevices = async function (request, response, next) {
-
+    try {
+        let devices = await db.Device.find().populate("organization branch");
+        return response.status(200).json(devices);
+    } catch (error) {
+        return next(error);
+    }
 };
