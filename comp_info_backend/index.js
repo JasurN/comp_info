@@ -5,7 +5,10 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const authRoutes = require("./routes/auth");
+const organizationRoutes = require("./routes/organization");
+const branchRoutes = require("./routes/branch");
 const errorHandlers = require("./handlers/error");
+const {loginRequired} = require("./middleware/auth");
 
 const PORT = 8081;
 
@@ -16,6 +19,8 @@ app.use(bodyParser.json());
 
 // routes for authorization
 app.use("/api/auth", authRoutes);
+app.use("/api/organizations", loginRequired, organizationRoutes);
+app.use("/api/branches", loginRequired, branchRoutes);
 
 // handle invalid routes and return 404
 app.use(function (req, res, next) {
