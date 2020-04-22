@@ -15,6 +15,6 @@ exports.getOrganizations = async function(request, response, next) {
         let organizations = await db.Organization.find();
         return response.status(200).json(organizations);
     } catch (error) {
-        return next({status: 400, message: error.message});
+        return next(error);
     }
 };

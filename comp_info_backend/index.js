@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 const organizationRoutes = require("./routes/organization");
 const branchRoutes = require("./routes/branch");
+const deviceRoutes = require("./routes/device");
+
 const errorHandlers = require("./handlers/error");
 const {loginRequired} = require("./middleware/auth");
 
@@ -21,6 +23,7 @@ app.use(bodyParser.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/organizations", loginRequired, organizationRoutes);
 app.use("/api/branches", loginRequired, branchRoutes);
+app.use("/api/devices", loginRequired, deviceRoutes);
 
 // handle invalid routes and return 404
 app.use(function (req, res, next) {

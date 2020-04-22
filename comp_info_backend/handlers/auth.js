@@ -29,7 +29,7 @@ exports.signin = async function (request, response, next) {
             });
         }
     } catch (error) {
-        return next({status: 400, message: `${error.message} catch block`});
+        return next(error);
     }
 };
 
