@@ -9,6 +9,10 @@
 `node index.js` - to run backend <br>
 `nodemon index.js` - to run backend with hot reloading 
 
+### Example api calls
+1. There is comp_info.postman_collection.json which can be imported to Postman 
+in order to perform some api calls to backend 
+
 ## Start frontend
 ### Requirements 
 1. node 10.x.x +

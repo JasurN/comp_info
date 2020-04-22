@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "e06c7510-67b6-4d39-bcf6-d8adc89d767b",
+		"name": "comp_info",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign up user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\" : \"jasurn\",\n \"password\" : \"jasurn\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				},
+				"description": "Sign up route"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\" : \"jasurn\",\n \"password\" : \"jasurn\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				},
+				"description": "sign in route\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Add organization",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"title\": \"google\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/organizations/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"organizations",
+						""
+					]
+				},
+				"description": "add organization"
+			},
+			"response": []
+		},
+		{
+			"name": "Get organizations list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/organizations/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"organizations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add branch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Tashkent\",\n\t\"location\" : \"Center-4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/branches/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"branches",
+						""
+					]
+				},
+				"description": "Add branch\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Get branches list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/branches/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"branches",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add device to db",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/devices/5ea018455e729917131b8c47/5ea01fa252a7171e64fc5420",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"devices",
+						"5ea018455e729917131b8c47",
+						"5ea01fa252a7171e64fc5420"
+					]
+				},
+				"description": "requerements: organization_id, branch_id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/devices/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/devices/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"devices",
+						""
+					]
+				},
+				"description": "Get all devices from db"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Device Usage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTAxNzgzOWVhODRhMTYzZWJhNjlkZiIsInVzZXJuYW1lIjoiamFzdXJuIiwiaWF0IjoxNTg3NTUyNDYyfQ.-_t6wb-yqw0lXxlHO6rX9mKXPFBO30c7G6a01MjAbZ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n            \"version\": \"Some version\",\n            \"cpuTemperature\": 40,\n            \"gpuTemperature\": 40,\n            \"cpuWorkload\": 20,\n            \"gpuWorkload\": 90,\n            \"ramUsage\": 50,\n            \"cpuUsage\": 40,\n            \"gpuUsage\": 40,\n            \"ramAvailable\": 8002,\n            \"isRendering\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/deviceUsage/5ea02eda534ffe2d6bcc1bf0/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"deviceUsage",
+						"5ea02eda534ffe2d6bcc1bf0",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
